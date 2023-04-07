@@ -37,17 +37,26 @@
 </html>-->
 
 <link rel="stylesheet" href="../public/Style/style_form.css">
-
+<style>
+    #submit-email-user{
+        background-color: #008080;
+        border-radius: 20px;
+        color: whitesmoke;
+    }
+    #email-modal{
+        background-color: #FFCC99;
+    }
+</style>
 <div id="email-modal" class="modal-email-user">
         <div class="modal-content-email-user">
           <span class="close" id="close-btn">&times;</span>
           <form action="../BackEnd/Email.php" method="post">
-            <label for="to">To:</label><br>
-            <input type="email" id="to-email-user" name="to-email" required> <br>
-            <label for="subject">Subject:</label><br>
-            <input type="text" id="subject-email-user" name="subject-email" required> <br>
-            <label for="message">Message:</label><br>
-            <textarea id="message-email-user" name="message-email" required></textarea> <br>
+            <label for="to">To: </label> <br>
+            <input type="email" id="to-email-user" name="to-email" required><br><br>
+            <label for="subject">Subject:</label><br><br>
+            <input type="text" id="subject-email-user" name="subject-email" required> <br><br>
+            <label for="message">Message:</label><br><br>
+            <textarea id="message-email-user" name="message-email" required></textarea> <br><br>
             <button type="submit" id="submit-email-user" name="submit-email">Send</button>
           </form>
         </div>
