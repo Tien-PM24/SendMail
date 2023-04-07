@@ -1,7 +1,8 @@
 <?php
-    include '../../Email/PHPMailer-master/src/PHPMailer.php';
-    include '../../Email/PHPMailer-master/src/SMTP.php';
-    include '../../Email/PHPMailer-master/src/Exception.php';
+    include '../Email/PHPMailer-master/src/PHPMailer.php';
+    include '../Email/PHPMailer-master/src/SMTP.php';
+    include '../Email/PHPMailer-master/src/Exception.php';
+  
     $mail = new PHPMailer\PHPMailer\PHPMailer();
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';  // SMTP server của bạn
@@ -28,8 +29,8 @@
             echo 'Error sending email: ' . $mail->ErrorInfo;
         } else {
             echo "<script>alert('Email sent successfully.')</script>";
-            header('location:../../../Admin/Php/FrontEnd/Home.php');
-        }
+        //     header('location:../../../Admin/Php/FrontEnd/Home.php');
+         }
     }
 
     ?>
